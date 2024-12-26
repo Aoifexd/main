@@ -38,43 +38,60 @@
             margin-top: 10px;
         }
         .container2 {
-  position: relative;
-  width: 50%;
-}
+            position: relative;
+            width: 50%;
+            margin: 20px auto; /* Center the container */
+        }
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgba(0, 140, 186, 0.7); /* Transparency */
+        }
+        .container2:hover .overlay {
+            opacity: 1;
+        }
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+            position: relative; /* Add position relative */
+        }
 
-.image {
-display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
 
-.container2:hover .overlay {
-  opacity: 1;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -84,14 +101,64 @@ display: block;
     <div class="container">
         <img src="unnamed.jpg" alt="Profile Picture" class="profile-picture">
         <div class="title">Your Name</div>
-        <div class="description">A short bio about yourself. Your interests, hobbies, or anything you'd like to share.
-            <div class="container2">
-                <img src="img_avatar.png" alt="Avatar" class="image">
-                <div class="overlay">
-                  <div class="text">meong</div>
-                </div>
-              </div>              
+        <div class="description">
+            A short bio about yourself. Your interests, hobbies, or anything you'd like to share.
         </div>
+    </div>
+    <div class="container2">
+        <img src="img_avatar.png" alt="Avatar" class="image">
+        <div class="overlay">
+            <div class="text">meong</div>
+        </div>
+    </div>
+    <h2>Gallery with Fade-In Overlay</h2>
+
+    <div class="gallery">
+        <div class="container">
+            <a target="_blank" href="img_5terre.jpg">
+                <img src="img_5terre.jpg" alt="Cinque Terre" class="image">
+            </a>
+            <div class="overlay">
+                <div class="text">Cinque Terre</div>
+            </div>
+        </div>
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+    <div class="gallery">
+        <div class="container">
+            <a target="_blank" href="img_forest.jpg">
+                <img src="img_forest.jpg" alt="Forest" class="image">
+            </a>
+            <div class="overlay">
+                <div class="text">Forest</div>
+            </div>
+        </div>
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+    <div class="gallery">
+        <div class="container">
+            <a target="_blank" href="img_lights.jpg">
+                <img src="img_lights.jpg" alt="Northern Lights" class="image">
+            </a>
+            <div class="overlay">
+                <div class="text">Northern Lights</div>
+            </div>
+        </div>
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+    <div class="gallery">
+        <div class="container">
+            <a target="_blank" href="img_mountains.jpg">
+                <img src="img_mountains.jpg" alt="Mountains" class="image">
+            </a>
+            <div class="overlay">
+                <div class="text">Mountains</div>
+            </div>
+        </div>
+        <div class="desc">Add a description of the image here</div>
     </div>
 </body>
 </html>
