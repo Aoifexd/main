@@ -37,6 +37,43 @@
             font-size: 1.2em;
             margin-top: 10px;
         }
+        .container2 {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container2:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
     </style>
 </head>
 <body>
@@ -46,7 +83,14 @@
     <div class="container">
         <img src="unnamed.jpg" alt="Profile Picture" class="profile-picture">
         <div class="title">Your Name</div>
-        <div class="description">A short bio about yourself. Your interests, hobbies, or anything you'd like to share.</div>
+        <div class="description">A short bio about yourself. Your interests, hobbies, or anything you'd like to share.
+            <div class="container2">
+                <img src="img_avatar.png" alt="Avatar" class="image">
+                <div class="overlay">
+                  <div class="text">Hello World</div>
+                </div>
+              </div>              
+        </div>
     </div>
 </body>
 </html>
